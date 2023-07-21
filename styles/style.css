@@ -1,3 +1,93 @@
+.container {
+  width: 600px;
+  height: 400px;
+  background-color: white;
+  border-radius: 8px;
+  border-bottom-right-radius: 120px;
+  margin: 50px auto;
+}
+
+.age-inputs {
+  display: flex;
+  padding: 27px 0 0 30px;
+}
+
+.day,
+.month,
+.year {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: bold;
+  color: gray;
+  margin-bottom: 7px;
+  letter-spacing: 2px;
+}
+
+.date-input {
+  font-size: 20px;
+  font-weight: 800;
+  width: 110px;
+  height: 50px;
+  padding: 13px;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 4px;
+}
+
+.date-input:focus {
+  outline: 1px solid hsl(259, 100%, 65%);
+  cursor: pointer;
+}
+
+.date-input::placeholder {
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+}
+
+.line {
+  border: 1px solid hsl(0, 0%, 86%);
+}
+
+.separating-line {
+  width: 530px;
+  margin: 0 auto;
+  margin-top: 30px;
+  position: relative;
+}
+
+.arrow-icon {
+  background-color: hsl(259, 100%, 65%);
+  position: absolute;
+  right: 0;
+  bottom: -29px;
+  border-radius: 55%;
+  padding: 15px;
+  transition: background-color 0.25s;
+}
+
+.arrow-icon:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+.calculator-container {
+  padding: 25px 0 0 30px;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.result {
+  color: hsl(259, 100%, 65%);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
