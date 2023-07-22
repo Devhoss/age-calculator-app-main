@@ -1,6 +1,6 @@
 .container {
   width: 600px;
-  height: 400px;
+
   background-color: white;
   border-radius: 8px;
   border-bottom-right-radius: 120px;
@@ -58,9 +58,11 @@
 
 .separating-line {
   width: 530px;
+  height: 1px;
   margin: 0 auto;
   margin-top: 30px;
   position: relative;
+  vertical-align: middle;
 }
 
 .arrow-icon {
@@ -79,13 +81,16 @@
 }
 
 .calculator-container {
-  padding: 25px 0 0 30px;
-  font-size: 50px;
+  padding: 25px 0 15px 30px;
+  font-size: 65px;
   font-weight: 800;
 }
 
 .result {
   color: hsl(259, 100%, 65%);
+  font-size: 64px;
+  font-weight: 800;
+  font-style: italic;
 }
 
 .attribution {
@@ -94,4 +99,51 @@
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 750px) {
+  .container {
+    width: 350px;
+  }
+
+  .age-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .label {
+    font-size: 10px;
+  }
+
+  .date-input {
+    font-size: 15px;
+    width: 65px;
+    height: 35px;
+    padding: 10px;
+  }
+
+  .date-input::placeholder {
+    font-size: 15px;
+  }
+
+  .separating-line {
+    width: 300px;
+    height: 1px;
+    margin-top: 60px;
+  }
+
+  .arrow-icon {
+    right: 120px;
+    width: 50px;
+  }
+
+  .calculator-container {
+    padding: 55px 0 15px 30px;
+    font-size: 50px;
+  }
+
+  .result {
+    font-size: 50px;
+  }
 }
