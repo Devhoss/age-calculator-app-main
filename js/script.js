@@ -22,4 +22,31 @@ calculateBtn.addEventListener("click", () => {
 
   const daysEntered = currentDay - day;
   daysResult.textContent = daysEntered;
+
+  const emptyError = document.querySelectorAll(".empty-error");
+  emptyError.forEach((error) => {
+    document.querySelectorAll(".label, input.date-input").forEach((name) => {
+      if (year === "" || month === "" || day === "") {
+        error.textContent = "This field is required";
+        yearsResult.textContent = "- -";
+        monthsResult.textContent = "- -";
+        daysResult.textContent = "- -";
+        name.classList.add("red");
+        name.classList.add("red-border");
+      } else {
+        error.innerHTML = "";
+        yearsResult.textContent = yearsEntered;
+        name.classList.remove("red");
+        name.classList.remove("red-border");
+      }
+    });
+  });
 });
+
+// else if (month === "") {
+//   error.textContent = "This field is required";
+//   monthsResult.textContent = "--";
+// } else if (day === "") {
+//   error.textContent = "This field is required";
+//   daysResult.textContent = "--";
+// }
