@@ -24,6 +24,10 @@ calculateBtn.addEventListener("click", () => {
   daysResult.textContent = daysEntered;
 
   const emptyError = document.querySelectorAll(".empty-error");
+  const invalidDay = document.getElementById("day-error");
+  const invalidMonth = document.getElementById("month-error");
+  const invalidYear = document.getElementById("year-error");
+
   emptyError.forEach((error) => {
     document.querySelectorAll(".label, input.date-input").forEach((name) => {
       if (year === "" || month === "" || day === "") {
@@ -33,20 +37,42 @@ calculateBtn.addEventListener("click", () => {
         daysResult.textContent = "- -";
         name.classList.add("red");
         name.classList.add("red-border");
+      } else if (day < 1 || day > 31) {
+        invalidDay.textContent = "Must be a valid day";
+        yearsResult.textContent = "- -";
+        monthsResult.textContent = "- -";
+        daysResult.textContent = "- -";
+        name.classList.add("red");
+        name.classList.add("red-border");
+      } else if (month < 1 || month > 12) {
+        invalidMonth.textContent = "Must be a valid month";
+        yearsResult.textContent = "- -";
+        monthsResult.textContent = "- -";
+        daysResult.textContent = "- -";
+        name.classList.add("red");
+        name.classList.add("red-border");
+      } else if (year > currentYear) {
+        invalidYear.textContent = "Must be in the past";
+        yearsResult.textContent = "- -";
+        monthsResult.textContent = "- -";
+        daysResult.textContent = "- -";
+        name.classList.add("red");
+        name.classList.add("red-border");
+      } else if (month == 4 && day >= 31) {
+        invalidDay.textContent = "Must be a valid date";
+        yearsResult.textContent = "- -";
+        monthsResult.textContent = "- -";
+        daysResult.textContent = "- -";
+        name.classList.add("red");
+        name.classList.add("red-border");
       } else {
         error.innerHTML = "";
         yearsResult.textContent = yearsEntered;
+        monthsResult.textContent = monthsEntered;
+        daysResult.textContent = daysEntered;
         name.classList.remove("red");
         name.classList.remove("red-border");
       }
     });
   });
 });
-
-// else if (month === "") {
-//   error.textContent = "This field is required";
-//   monthsResult.textContent = "--";
-// } else if (day === "") {
-//   error.textContent = "This field is required";
-//   daysResult.textContent = "--";
-// }
