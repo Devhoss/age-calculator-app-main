@@ -17,7 +17,7 @@ calculateBtn.addEventListener("click", () => {
   const yearsEntered = currentYear - year;
   yearsResult.textContent = yearsEntered;
 
-  const monthsEntered = month - currentMonth;
+  const monthsEntered = currentMonth - month;
   monthsResult.textContent = monthsEntered;
 
   const daysEntered = currentDay - day;
