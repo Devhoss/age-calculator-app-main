@@ -62,7 +62,7 @@
 }
 
 .empty-error {
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 500px;
   color: hsl(0, 100%, 67%);
   margin-top: 5px;
@@ -79,6 +79,10 @@
   margin-top: 30px;
   position: relative;
   vertical-align: middle;
+}
+
+.calculate-btn {
+  display: flex;
 }
 
 .arrow-icon {
@@ -137,6 +141,10 @@
     width: 75px;
     height: 35px;
     padding: 10px;
+  }
+
+  .empty-error {
+    font-size: 8px;
   }
 
   .date-input::placeholder {
